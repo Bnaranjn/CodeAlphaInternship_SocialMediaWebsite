@@ -6,6 +6,7 @@ const commentRoutes = require("./routes/commentRoutes");
 const authRoutes = require("./routes/authRoutes");
 const postRoutes = require("./routes/postRoutes");
 const userRoutes = require("./routes/userRoutes");
+const path = require("path");
 
 dotenv.config();
 
@@ -13,6 +14,7 @@ const app = express();
 
 app.use(express.json());
 
+app.use(express.static(path.join(__dirname, "../frontend")));
 app.use("/api/auth", authRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/comments", commentRoutes);

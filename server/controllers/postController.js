@@ -44,6 +44,7 @@ const getPosts = async (req, res) => {
     });
   }
 };
+
 const likePost = async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);

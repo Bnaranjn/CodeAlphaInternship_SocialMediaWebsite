@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =============
+reset
+=========== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+/* ===============
+variables
+============== */
+:root{
+    --primary:#4f46e5;
+    --primary-hover:#4338ca;
+    --background:#f5f7fb;
+    --card:#ffffff;
+    --text:#222;
+    --secondary:#666;
+    --border:#d9d9d9;
+    --shadow:0 10px 35px rgba(0,0,0,.08);
+    --radius:16px;
+}
+
+/* ========
+body
+========== */
+body{
+    font-family:"Poppins",sans-serif;
+    background:var(--background);
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+}
+
+/* ===============
+register login
+================== */
+
+.auth-page{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.auth-card{
+    width:100%;
+    max-width:420px;
+
+    background:var(--card);
+
+    border-radius:var(--radius);
+
+    padding:45px 40px;
+
+    box-shadow:var(--shadow);
+
+}
+/* ==============
+logo
+=============== */
+
+.logo{
+
+    text-align:center;
+
+    margin-bottom:18px;
+}
+
+.logo h1{
+
+    color:var(--primary);
+
+    font-size:2rem;
+
+    font-weight:700;
+
+}
+
+/* ===================
+headings
+============== */
+
+.auth-card h2{
+
+    text-align:center;
+
+    color:var(--text);
+
+    margin-bottom:8px;
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:var(--secondary);
+
+    font-size:.95rem;
+
+    margin-bottom:35px;
+
+    line-height:1.5;
+}
+
+/* =====
+form */
+
+.form-group{
+
+    margin-bottom:20px;
+}
+.form-group label{
+
+    display:block;
+    margin-bottom:8px;
+    font-size:.9rem;
+
+    font-weight:500;
+
+    color:var(--text);
+
+}
+
+.form-group input{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    font-size:1rem;
+
+    outline:none;
+
+    transition:.25s;
+
+}
+
+.form-group input:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(79,70,229,.15);
+
+}
+
+/* =============
+   Button
+=========== */
+
+.primary-btn{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-top:8px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.primary-btn:hover{
+
+    background:var(--primary-hover);
+
+}
+
+/* ===============
+   Links
+========= */
+
+.auth-link{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:var(--secondary);
+
+    font-size:.95rem;
+
+}
+
+.auth-link a{
+
+    color:var(--primary);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.auth-link a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* =============
+   Message
+========= */
+
+#message{
+
+    margin-top:18px;
+
+    text-align:center;
+
+    font-size:.95rem;
+
+    color:#d32f2f;
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:480px){
+
+    .auth-card{
+
+        padding:35px 25px;
+
+    }
+
+    .logo h1{
+
+        font-size:1.8rem;
+
+    }
+
+}

@@ -37,7 +37,7 @@ const getComments = async (req, res) => {
     const comments = await Comment.find({
       post: req.params.postId,
     })
-      .populate("author", "username bio")
+      .populate("author", "username")
       .sort({ createdAt: -1 });
     res.status(200).json(comments);
   } catch (error) {

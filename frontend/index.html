@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SocialHub</title>
+
+    <link rel="stylesheet" href="css/feed.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <h2 class="logo">SocialHub</h2>
+
+      <div class="nav-right">
+        <a href="profile.html">Profile</a>
+        <button id="logoutBtn">Logout</button>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section class="create-post">
+        <h3>Create a Post</h3>
+
+        <textarea
+          id="postContent"
+          placeholder="What's on your mind?"
+        ></textarea>
+
+        <button id="postBtn">Share Post</button>
+      </section>
+
+      <section id="feed">
+        <!--posts-->
+      </section>
+    </main>
+
+    <script src="js/feed.js"></script>
+  </body>
+</html>

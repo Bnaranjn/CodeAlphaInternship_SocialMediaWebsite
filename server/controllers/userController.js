@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const Post = require("../models/Post");
 const followUser = async (req, res) => {
   try {
     const currentUserId = req.user._id;
@@ -57,23 +58,35 @@ const followUser = async (req, res) => {
 
 const getProfile = async (req, res) => {
   try {
-    //select -password - removes the password
     const user = await User.findById(req.params.id)
-      .select("-password")
       .populate("followers", "username")
-      .populate("following", "username");
+      .populate("following", "username")
+      .select("-password");
 
     if (!user) {
       return res.status(404).json({
         message: "User not found",
       });
     }
-    res.status(200).json(user);
+
+    const posts = await Post.find({
+      author: user._id,
+    }).sort({ createdAt: -1 });
+
+    res.status(200).json({
+      user,
+      posts,
+    });
   } catch (error) {
     console.log(error);
-    req.status(500).json({
-      message: "Server error",
+
+    res.status(500).json({
+      message: "Server Error",
     });
   }
 };
-module.exports = { followUser, getProfile };
+
+module.exports = {
+  followUser,
+  getProfile,
+};

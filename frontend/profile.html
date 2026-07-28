@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="css/profile.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <h2 class="logo">SocialHub</h2>
+
+      <a href="index.html"> Home </a>
+    </nav>
+
+    <main class="profile-container">
+      <div class="profile-card">
+        <img src="assets/avatar.png" class="avatar" />
+
+        <h2 id="username">Username</h2>
+
+        <p id="bio">bio</p>
+
+        <div class="stats">
+          <div class="stat-box">
+            <h3 id="followers">0</h3>
+            <p>Followers</p>
+          </div>
+
+          <div class="stat-box">
+            <h3 id="following">0</h3>
+            <p>Following</p>
+          </div>
+        </div>
+
+        <div class="follow-lists">
+          <div class="list-card">
+            <h3>Followers</h3>
+
+            <ul id="followersList"></ul>
+          </div>
+
+          <div class="list-card">
+            <h3>Following</h3>
+
+            <ul id="followingList"></ul>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <h2>My Posts</h2>
+
+        <div id="userPosts"></div>
+      </section>
+    </main>
+
+    <script src="js/profile.js"></script>
+  </body>
+</html>
